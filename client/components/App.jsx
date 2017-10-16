@@ -1,15 +1,20 @@
 import React from 'react';
-
+import Contacts from './Contacts.jsx'
 export default class App extends React.Component {
+
+    reloadData(arg) {
+        alert('aaa')
+        return <div>Welcome{arg}</div>
+    }
+
+
     render() {
         return (
             <div style={{textAlign: 'center'}}>
-                <button id="something-btn" type="button" class="btn btn-success btn-sm">
-                    Click  here
+                <button id="reload" onClick={() => this.reloadData('raji')}>Reload
                 </button>
-                <button id="something-btn2" type="button" class="btn btn-info btn-sm">
-                    Click  here
-                </button>
+                <Contacts id="c1"/>
+                {this.reloadData('muru')}
             </div>);
     }
 }
